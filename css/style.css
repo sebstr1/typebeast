@@ -1,0 +1,425 @@
+/*******************************************************************************
+* Laboration 4, Kurs: DT146G
+* File: style.css
+* Desc: Style sheets for laboration 3
+* 
+* Sebastian Strindlund
+* sest1601
+* sest1601@student.miun.se
+******************************************************************************/
+
+/*  
+https://coolors.co/f05d5e-0f7173-e7ecef-272932-EAC435
+
+#F05D5E 'SUNSET ORANGE'
+#0F7173 'SKOBELOFF'
+#E7ECEF 'GLITTER'
+#272932 'CHARLESTON GREEN'
+#EAC435 'SAFFRON' 
+
+*/
+/* @import url('https://fonts.googleapis.com/css?family=Bungee|Source+Code+Pro|Quattrocento+Sans:700'); */
+
+/* latin */
+@font-face {
+  font-family: 'Bungee';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/Bungee-Regular.ttf'), url(https://fonts.gstatic.com/s/bungee/v3/86NbnFpNqZ2MU9Gl0ca2YQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Quattrocento Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/QuattrocentoSans-Bold.ttf'), url(https://fonts.gstatic.com/s/quattrocentosans/v10/tXSgPxDl7Lk8Zr_5qX8FIbvMLSVzqOGkoxdgTSsKqWM.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/SourceCodePro-Regular.ttf'), url(https://fonts.gstatic.com/s/sourcecodepro/v7/mrl8jkM18OlOQN8JLgasD9V_2ngZ8dMf8fLgjYEouxg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+
+html {
+    height: 100vh;
+    width: 100vw;
+    margin:0;
+    padding:0;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+
+header {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+body {
+    
+    min-height:100vh;
+    width: 100vw;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/bg.png);
+    background-repeat: repeat;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    animation: fadein 4s;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+.page-width img {
+    margin-top: 0;
+}
+
+.logo {
+    display: inline-block;
+    margin:1.5em auto;
+    max-width: 150px;
+    vertical-align: middle;
+}
+
+
+.header-label {    
+    font-family: 'Bungee', cursive;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 40px;
+    color: #F05D5E;
+    overflow: hidden;
+    animation: colorChange 20s infinite;
+}
+
+@keyframes colorChange {
+    0% {color: #E7ECEF }
+    20% {color: red}
+    40% {color: blue}
+    60% {color: orange}
+    80% {color: green}
+    100% {color: #E7ECEF }
+}
+
+.on-fire{
+    animation: shake 0.8s infinite;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.options-container {
+    font-family: 'Source Code Pro', monospace;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.lang {
+    text-align: left;
+    vertical-align: top
+}
+
+#casingOptions {
+  vertical-align: middle;
+}
+
+.casing {
+    margin-top: 5px;
+    text-align: left;
+
+}
+
+.main-section {
+    
+    margin-top:0;
+    margin-bottom:0;
+    color: #E7ECEF;
+    height: 100%;
+    flex: 1 0 auto;
+    /* border: solid 2px red; */
+}
+
+/* Sets width of header, body and section to 600px */
+.page-width {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+.selector-label {
+    display:block;
+    color: #E7ECEF;
+
+}
+
+.selector {
+    background-color: #E7ECEF;
+    text-align-last:center;
+    border-radius: 3px;
+    max-width: 100%;
+    max-height: 100%;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+
+.text-section {
+    max-width: 100%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    text-align: center;
+    color: white;
+    border: solid 3px rgb(255, 0, 0);
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: black;
+}
+
+.text-title, .text-author {
+    font-family: 'Quattrocento Sans', sans-serif;
+}
+
+#textIndex0 {
+    text-align: center;
+}
+
+.text-active{
+   
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 1.2;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.6rem;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    word-spacing: normal;
+    color: #E7ECEF
+}
+
+.text-active span {
+    text-align: center;
+}
+
+.nextChar {
+    background-color:gray;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    from,to {
+
+    } 50% {
+        background-color: black;
+    }
+}
+
+
+.completedChar {
+    color: #27253E;
+}
+
+.failChar {
+    color:red;
+}
+
+.failSpace {
+    background-color:rgb(75, 3, 3);
+}
+
+.user-input-field {
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    background-color: #E7ECEF;
+    max-width: 100%;
+    max-height: 100%;
+    font-size: 20px;
+    border-radius: 5px;
+}
+input:focus::-webkit-input-placeholder { color:transparent; }
+
+button, button:active, button:visited, button:focus{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.action-button {
+    max-width: 50px;
+    cursor: pointer;
+
+}
+
+.input-section {
+    text-align: center;
+}
+
+.input-section p {
+    margin-bottom: auto;
+    text-align: center
+}
+
+.graph {
+    background-color: black;
+}
+
+.stats-section {
+    font-family: 'Source Code Pro', monospace;
+    margin-top: 3px;
+    color: #E7ECEF;
+    display: flex;
+    justify-content: center;
+}
+
+.stats-section p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.stats-wpm, .stats-hits {
+    
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: right;
+}
+
+
+
+
+/* Footer specifics */
+
+
+/* Places footer at bottom and aligns text to center. */
+footer {
+    font-family: 'Quattrocento Sans', sans-serif;
+    border-top: solid 1px white;
+    width:100%;
+    text-align: center;
+    font-size: 12px;
+    font-weight:bold;
+}
+
+footer a, footer p{
+    color: #E7ECEF;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+
+
+@media screen and (min-resolution: 1.25dppx) {
+
+    .selector {
+        font-size: 16px;
+        border-radius: 5px;
+    }
+
+    .text-section {
+        border: solid 2px blue;
+        margin: 4px;
+    }
+    
+    .text-active {
+        font-size: 1.1rem;
+    }
+
+    .user-input-field {
+        font-size: 1.0rem;
+    }
+    .input-section p, .action-button{
+        margin-bottom:0;
+    }
+
+    .action-button {
+        max-width: 30px;
+    }
+
+    .stats-section p {
+        margin-top:0;
+    }
+}
+
+
+@media screen and (max-width: 732px) {
+    .logo {
+        display:none;
+        
+    }
+    .selector, .options-container {
+        font-size: 14px;
+        border-radius: 5px;
+    }
+
+    .b
+
+    h2 {
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 12px;
+    }
+    .text-active {
+        font-size: 1.1rem;
+    }
+
+    .user-input-field {
+        font-size: 1.0rem;
+    }
+    .input-section p, .action-button{
+        margin-bottom:0;
+    }
+
+    .action-button {
+        max-width: 30px;
+    }
+
+    .stats-section p {
+        margin-top:0;
+        font-size: 14px;
+    }
+}

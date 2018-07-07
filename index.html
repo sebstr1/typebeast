@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<!--
+Sebastian Strinlund
+sest1601
+sest1601.student@miun.se
+-->
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>TypeBEAST</title>
+        <link rel="shortcut icon" type="image/png" href="img/logo.ico" />
+        <link rel='stylesheet' href='css/style.css'>
+        <script src="js/main.js" defer></script>
+    </head>
+
+    <!-- the body -->
+    <body>
+        
+        <!-- header -->
+        <header class="page-width">
+            <img class="logo" src="img/logo.png" alt="Logo">
+            <label class="header-label">TypeBEAST</label>
+        </header>    
+
+        <!-- Main section -->
+        <main class="main-section page-width">
+            <section class="options-container">
+                <section class="options">
+                    <div class="lang">
+                        <input class="lang-selector" name="lang" type="radio" value="eng"/>
+                        <label for="lang">English</label>
+                        <input class="lang-selector" checked="checked"name="lang" type="radio" value="swe"/> 
+                        <label for="lang">Swedish</label>
+                    </div>
+                    <div class="casing">
+                        <input type="checkbox" class="casing-checkbox" id="casingOptions">
+                        <label for="casingOptions">Ignore Casing</label>
+                    </div>
+                </section>
+                <section class="selector-container">
+                    <label class="selector-label">Choose text</label>
+                    <select class="selector"></select>
+                </section>
+            </section>
+
+            <section class="text-section">
+                <h2 class="text-title">Förändringens Tid</h2>
+                <h3 class="text-author">Erik Ström</h3>
+                <p class= "text-active">Vinden viner över sällsamma ruiner, över berg och slätter, dagar som nätter. Ger världen form inför den kommande storm, likt
+                gudars sång, skall bli dess undergång. Svart som natten, blank likt vatten, i skyn du häver då Allfader kräver. Åter resas
+                skall nu han, som i misteln döden fann. Sonas med sin ene broder, den blinde född av samma moder. Satt att råda är de båda,
+                bröders hand över evigt land.</p>
+            </section>
+
+            <section class="input-section">
+                <input disabled="true" class="user-input-field" type="text" placeholder="Type here...">
+                <p>
+                    <button><img class="action-button" src="./img/play.png" alt="play/stop"></button>
+                </p>
+            </section>
+
+            <section class="stats-section">
+                <div class=stats-wpm>
+                    <p class="stats stats-gross">Gross WPM: </p>
+                    <p class="stats stats-net">Net WPM: </p>
+                </div>
+                <div class="stats-hits">
+                    <p class="stats stats-acc">Accuracy: </p>
+                    <p class="stats stats-err">Errors: </p>
+                </div>
+            </section>
+
+            
+
+        </main>
+        
+        <!-- Footer -->
+        <footer class="page-width">
+            <p>Copyright &copy; 2017 Sebastian Strindlund. All Rights Reserved.</p>
+            <a href="mailto:sest1601@student.miun.se">Contact me</a>
+        </footer>
+    </body>
+</html>
+
